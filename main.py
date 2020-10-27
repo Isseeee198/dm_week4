@@ -9,5 +9,6 @@ import importlib
 importlib.reload(regression)
 model = regression.LinearRegression()
 model.fit(X,Y)
-model.theta
-print(model.theta)
+#model.theta
+model.predict(X)
+print(model.predict(X))
