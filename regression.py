@@ -17,3 +17,16 @@ class LinearRegression:
   	return (error**2).sum()
   	#pass
   	
+  	
+class RidgeRegression(LinearRegression):
+   alpha = None
+   
+   def __init__(self, alpha=0.1):
+       self.alpha = alpha
+       
+   def fit(self, input, output):
+       xTx = np.dot(input.T, input)
+       I = np.eye(len(xTx))
+       self.theta = np.dot(np.dot(np.linalg.inv(xTx + self.alpha*I),input.T),output)
+       
+       
