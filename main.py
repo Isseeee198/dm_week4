@@ -3,7 +3,8 @@
 
 import datasets2
 X, Y = datasets2.load_nonlinear_example1()
-ex_X = datasets2.polynomial2_features(X)
+#ex_X = datasets2.polynomial2_features(X)
+ex_X = datasets2.polynomial3_features(X)
 print(ex_X)
 print(Y)
 
@@ -18,4 +19,4 @@ model.fit(X,Y)
 #model.theta
 #model.predict(X)
 model.score(X,Y)
-print(model.score(X,Y))
+#print(model.score(X,Y))
